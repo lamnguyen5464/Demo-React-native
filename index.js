@@ -3,21 +3,8 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './src/redux/App';
+import App from './src/restful/App';
+import TestApp from './src/socket/frontend/TestChatApp'
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => App);
-
-// const {createStore} = require('redux');
-
-// const reducer = (state = { value : 0}, action) => {
-//     switch(action.type){
-//         case 'UP': return { value : state.value + 1};
-//     }
-//     return state;
-// }
-
-// const store = createStore(reducer);
-// store.dispatch({type : 'UP'});
-// const myState = store.getState();
-// console.log(myState);
+AppRegistry.registerComponent(appName, () => TestApp);
