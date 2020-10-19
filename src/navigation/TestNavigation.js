@@ -3,7 +3,6 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Icon } from 'react-native-elements';
 
 function HomeScreen({ navigation }) {
     return (

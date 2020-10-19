@@ -5,6 +5,7 @@
 import {AppRegistry} from 'react-native';
 import App from './src/restful/App';
 import TestApp from './src/socket/frontend/TestChatApp'
+import TestNavigation from './src/navigation/TestNavigation'
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => TestApp);
+AppRegistry.registerComponent(appName, () => TestNavigation);
