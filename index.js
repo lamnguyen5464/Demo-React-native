@@ -7,5 +7,6 @@ import App from './src/redux/App';
 import TestApp from './src/socket/frontend/TestChatApp'
 import TestNavigation from './src/navigation/TestNavigation'
 import {name as appName} from './app.json';
+import TestAnimated from './src/animation/TestAnimated'
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => TestAnimated);
