@@ -27,6 +27,7 @@ export default class TestAnimated extends Component {
 				{
 				  toValue: width,
 				  friction: 10000000,
+				  useNativeDriver: true,
 				}
 			),
 			Animated.spring(
@@ -34,6 +35,7 @@ export default class TestAnimated extends Component {
 				{
 				  toValue: 0,
 				  friction: 10000000,
+				  useNativeDriver: true,
 				}
 			),
 		]).start();
