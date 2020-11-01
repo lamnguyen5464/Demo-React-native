@@ -9,4 +9,4 @@ import TestNavigation from './src/navigation/TestNavigation'
 import {name as appName} from './app.json';
 import TestAnimated from './src/animation/TestAnimated'
 
-AppRegistry.registerComponent(appName, () => TestAnimated);
+AppRegistry.registerComponent(appName, () => TestNavigation);

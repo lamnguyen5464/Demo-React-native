@@ -1,18 +1,29 @@
-import * as React from 'react';
-import { View, Text } from 'react-native';
+import React, {useState, useRef, useCallback} from 'react';
+import { View, Text, TextInput } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { debounce } from 'lodash';
 
 function HomeScreen({ navigation }) {
+    const [text, changeText] = useState("placeholder");
+    const goToNextScreen = () =>{
+        navigation.push('Info');
+    }
+    const sendText = (text) => {
+        console.log(text);
+    }
+    const delaySending= useCallback(debounce(sendText, 1000), []);
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text>Home Screen</Text>
-            <TouchableOpacity onPress={() => {
-                navigation.navigate('Info')
-            }}>
+            <TouchableOpacity onPress={debounce(goToNextScreen, 200)}>
                 <Text>Move to Info screen</Text>
             </TouchableOpacity>
+            <TextInput
+                onChangeText={newText => {changeText(newText); delaySending(newText);}}
+                value={text}
+            />
         </View>
     );
 }
